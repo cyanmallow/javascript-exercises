@@ -1,10 +1,14 @@
-const removeFromArray = function(originalArray, removeWhichNumber) {
-    const index = originalArray.indexOf(removeWhichNumber);
-    if (index !== -1){
-        originalArray.splice(index, 1);
-    }
-    return originalArray;
-};
+const removeFromArray = function (array, ...args) {
+    const newArray = [];
+    array.forEach((item) => {
+      if (!args.includes(item)) {
+        newArray.push(item);
+      }
+    });
+    return newArray;
+  };
+
+
 
 
 // Do not edit below this line
